@@ -1,0 +1,25 @@
+{
+  "name": "bitirme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "exceljs": "^3.5.0",
+    "express": "^4.17.1",
+    "json2csv": "^4.5.4",
+    "mongodb": "^3.4.0",
+    "mongoose": "^5.8.1",
+    "request": "^2.88.0",
+    "xlsx": "^0.15.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "description": ""
+}

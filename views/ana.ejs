@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>HAK-ER</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="/assets/style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+
+<ul>
+  <li><a class="active">HAK-ER</a></li>
+</ul>
+<div id="hako"> </div>
+<div class="dropdown">
+    <button class="dropbtn">Attacks Type</button>
+    <div class="dropdown-content">
+    <a href="http://localhost:5000/getssh" id="myid" onclick="myFunction()" >SSH Attacks</a>
+    <a href="http://localhost:5000/getBruteForce"id="myid">Brute Force</a>
+    <a href="http://localhost:5000/getbotnet"id="myid">BotNet Blocked IPs</a>
+    <a href="http://localhost:5000/getmalware"id="myid">Malware Attacks</a>
+    <a href="http://localhost:5000/getsslblack"id="myid">SSL Blocked IPs</a>
+    </div>
+    
+  </div>
+  <div>
+    <button class="butn">Download Excel(.xlsx)</button>
+    <button class="butn">Download JSON(.txt)</button>
+</div>
+  <div id="todo-table">
+  </div>
+  <table>
+    <tr>
+      <th>IPs</th>
+      <th>Port</th>
+      <th>Network Serivce</th>
+      <th>Type of Protocol</th>
+      <th>Date</th>
+      <th>Referance</th>
+    </tr>
+    <% for(var i=0 ; i < todos.length;i++){ %>
+        <tr>
+            <td><%= todos[i].ip %> </td>
+            <td><%= todos[i].port %> </td>
+            <td><%= todos[i].service %> </td>
+            <td><%= todos[i].protocol %> </td>
+            <td><%= todos[i].date %> </td>
+            <td><%= todos[i].referance %> </td>
+        </tr>
+    <% } %>
+  
+   
+  </table>
+  </div>
+
+</body>
+</html>
+
