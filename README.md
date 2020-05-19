@@ -1,2 +1,6 @@
-# CyberSecurityDetectedAttacks
-Web Application
+# Cyber Security Detected Attacks
+
+
+### Proje Amacı
+
+Proje kapsamında toplanılan veriler sınıflandırılarak gelecek olan isteklerin zararlı olup olmadığının tespit edecek(ilerleyen aşamada) ve sonuç olarak gerçekleşen trafiğin analizini gerçekleştirecektir. Bu aşamada ise ilerleyen aşamada kullanılmak üzere bir veri seti oluşturmak ve bu verileri yani daha önce saldırıda bulunmuş IP adreslerini port, kullanılan servis(HTTP, HTTPS) kullanılan protokol(TCP,UDP) ve saldırı tarihi ile bir web sayfasında farklı saldırı yöntemlerine göre listelenmesi amaçlanmıştır. Projede kullanılacak veriler belirli sitelerden Node.js kullanarak RestAPI tarafından, MongoDB veritabanına yazılan verilerdir. Hazırlanan web sayfasında HTML ve CSS’e ek olarak E.js kullanılmıştır. Bu sitede seçilen saldırı yöntemine yönelik toplanılan veriler listelenmekte istenildiği takdirde json veya excel olarak çıktı alınabilmektedir. Verilerde şuan için 4 farklı öznitelik barındırmakta olup bunlar IP, port, kullanılan servis(HTTP, HTTPS) ve atak için kullanılan standartlardır.Proje kapsamındaki saldırı yöntemleri; Brute Force saldırıları, SSH saldırıları, Botnet saldırıları, SSL saldırıları, Malware saldırıları olmak üzere 5 gruba ait veriler toplamıştır.
