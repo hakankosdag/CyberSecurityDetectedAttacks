@@ -170,14 +170,7 @@ app.get("/setMalwareUrlhausedu",async (req,res)=>{
                     var newip = el.match(r)[0]
                     var newservice = el.split('","')[1].split(':/')[0]
                     var newport = el.split(newip)[1].split('","')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newprotocol="UDP"
-                    }
+                  
                     malwcore.find({ip : newip},function(err,resp){
                     if(resp.length>=1){
                         //console.log(resp)
@@ -217,14 +210,7 @@ app.get("/setMalwareUrlhauscom",async (req,res)=>{
                     var newip = el.match(r)[0]
                     var newservice = el.split('","')[1].split(':/')[0]
                     var newport = el.split(newip)[1].split('","')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newprotocol="UDP"
-                    }
+             
                     malwcore.find({ip : newip},function(err,resp){
                         if(resp.length>=1){
                             //console.log(resp)
@@ -266,14 +252,7 @@ app.get("/setMalwareUrlhausnet",async (req,res)=>{
                     var newprotocol
                     var newservice = el.split('","')[1].split(':/')[0]
                     var newport = el.split(newip)[1].split('","')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newprotocol="UDP"
-                    }
+              
                     malwcore.find({ip : newip},function(err,resp){
                         if(resp.length>=1){
                             //console.log(resp)
@@ -314,14 +293,7 @@ app.get("/setMalwareUrlhausco",async (req,res)=>{
                     var newprotocol
                     var newservice = el.split('","')[1].split(':/')[0]
                     var newport = el.split(newip)[1].split('","')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newprotocol="UDP"
-                    }
+          
                     malwcore.find({ip : newip},function(err,resp){
                         if(resp.length>=1){
                             //console.log(resp)
@@ -362,14 +334,7 @@ app.get("/setMalwareUrlhausinfo",async (req,res)=>{
                     var newprotocol
                     var newservice = el.split('","')[1].split(':/')[0]
                     var newport = el.split(newip)[1].split('","')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newprotocol="UDP"
-                    }
+          
                     malwcore.find({ip : newip},function(err,resp){
                         if(resp.length>=1){
                             //console.log(resp)
@@ -410,14 +375,7 @@ app.get("/setMalwareUrlhausorg",async (req,res)=>{
                     var newprotocol
                     var newservice = el.split('","')[1].split(':/')[0]
                     var newport = el.split(newip)[1].split('","')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newprotocol="UDP"
-                    }
+         
                     var veri = new malwcore({
                         ip : newip,
                         port :newport,
@@ -471,14 +429,7 @@ app.get("/setMalwareUrlhausbiz",async (req,res)=>{
                     var newprotocol
                     var newservice = el.split('","')[1].split(':/')[0]
                     var newport = el.split(newip)[1].split('","')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newprotocol="UDP"
-                    }
+             
                     malwcore.find({ip : newip},function(err,resp){
                         if(resp.length>=1){
                             //console.log(resp)
@@ -519,14 +470,7 @@ app.get("/setMalwareUrlhauspro",async (req,res)=>{
                     var newprotocol
                     var newservice = el.split('","')[1].split(':/')[0]
                     var newport = el.split(newip)[1].split('","')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newprotocol="UDP"
-                    }
+       
                     malwcore.find({ip : newip},function(err,resp){
                         if(resp.length>=1){
                             //console.log(resp)
@@ -567,14 +511,7 @@ app.get("/setMalwareUrlhauscat",async (req,res)=>{
                     var newprotocol
                     var newservice = el.split('","')[1].split(':/')[0]
                     var newport = el.split(newip)[1].split('","')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newprotocol="UDP"
-                    }
+           
                     malwcore.find({ip : newip},function(err,resp){
                         if(resp.length>=1){
                             //console.log(resp)
@@ -615,16 +552,7 @@ app.get("/setsslBlackList",async (req,res)=>{
                     var newprotocol
                     var newservice 
                     var newport = el.split(newip)[1].split(',')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newservice="HTTP"
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newservice="HTTPS"
-                        newprotocol="UDP"
-                    }
+            
                     blist.find({ip : newip},function(err,resp){
                         if(resp.length>=1){
                             //console.log(resp)
@@ -664,16 +592,7 @@ app.get("/setBotnetBlockList",async (req,res)=>{
                     var newprotocol
                     var newservice 
                     var newport = el.split(newip)[1].split(',')[1]
-                    if(newport%2==0 | newport%7==0)
-                    {
-                        newservice="HTTP"
-                        newprotocol="TCP"
-                    }
-                    else
-                    { 
-                        newservice="HTTPS"
-                        newprotocol="UDP"
-                    }
+         
                     var veri = new botblist({
                         ip : newip,
                         port :newport,
